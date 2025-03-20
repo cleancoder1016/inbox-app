@@ -32,3 +32,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Astra ###
+secure-connect.zip
+
+### sample.txt ###
+sample.txt
