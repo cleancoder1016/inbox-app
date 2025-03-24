@@ -10,19 +10,18 @@ spring:
     cassandra:
       keyspace-name: main
       contact-points: localhost
-      username: jEnQDzqjASAhZmKePiuvbUBP
-      password: ryZPUS3ZbKoOJj5JkfSEh7Mh9Bup3vGGDn0kjGbe4JGlXxU6dYyMis5WiuULu
-      schema-action: recreate-drop-unused
+      username: oGRLeJQczZGBJXZHDFusWQmb
+      password: +WabaiZ6PNx+q7nhy+0oay3n_aoSqai.YJaXhS6J35Mlk71ZFg0ZZydX1-By2OWucKr9FYdf_8JSEH_SSDnw48SQg712XESEKD7GW9uU.g4utINYwjZ,uHKrTEpISZu,
+      schema-action: RECREATE_DROP_UNUSED
       request:
         timeout: 10s
       connection:
         connect-timeout: 10s
         init-query-timeout: 10s
 astra.db:
-  id: 4054a58e-d4c2-4c58-82f9-bd8d97ae524c-1
+  id: 556f35e4-efce-4c96-8bd9-6ee399358568
   region: us-east1
   keyspace: main
-  application.token: AstraCS:jEnQDzqjASAhZmKePiuvbUBP:efd8d2a47af39bc284b3a7d613bbc788887c86c4ec15e352b46494f58d5ce4ff
-
+  application.token: AstraCS:oGRLeJQczZGBJXZHDFusWQmb:d4c7fdd0302d9f168fb50ec4c4abe8c242ce54ac97d51bc17188ab44f293ec43
 datastax.astra:
   secure-connect-bundle: secure-connect.zip
