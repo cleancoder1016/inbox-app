@@ -2,6 +2,7 @@ package io.javabrains.inbox.contollers;
 
 import java.util.List;
 import io.javabrains.inbox.folders.Folder;
+import io.javabrains.inbox.folders.FolderService;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.ui.Model;
 public class InboxController {
 
     @Autowired private FolderRepository folderRepository;
+    @Autowired private FolderService folderService;
 
     @GetMapping(value="/")
     public String homePage(@AuthenticationPrincipal OAuth2User principal, Model model) {
@@ -27,8 +29,9 @@ public class InboxController {
 
         String userId = principal.getAttribute("login");
         List<Folder> userFolders = folderRepository.findAllById(userId);
-
+        List<Folder> defaultFolders = folderService.fetchDefaultFoders(userId);
         model.addAttribute("userFolders", userFolders);
+        model.addAttribute("defaultFolders", defaultFolders);
 
 
         return "inbox-page";
